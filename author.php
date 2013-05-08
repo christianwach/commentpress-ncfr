@@ -124,6 +124,8 @@ $page_args = array(
 	'post_status' => 'publish',
 	'post_type' => 'page',
 	'author' => $my_author->ID,
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
 	'posts_per_page' => -1,
 	'no_found_rows' => true,
 );
