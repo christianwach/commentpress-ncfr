@@ -24,8 +24,8 @@ function cpncfr_get_special_pages( $values = true ) {
 	// LOCAL DEV SERVER
 	if ( $_SERVER['HTTP_HOST'] == 'history.ncfr.cmw' ) {
 		$pages = array(
-			'browse_by_topic' => 1941,
-			'directory' => 1908,
+			'browse_by_topic' => 1925,
+			'directory' => 1899,
 		);
 	}
 
@@ -734,6 +734,34 @@ function cpncfr_text_highlight( $text ) {
 add_filter( 'the_title', 'cpncfr_text_highlight' );
 add_filter( 'the_excerpt', 'cpncfr_text_highlight' );
 
+
+
+
+
+
+/** 
+ * @description: filter search query to order by menu_order
+ * @todo: 
+ *
+ */
+function cpncfr_search_filter( &$query ) {
+	
+	// restrict to search
+	if ($query->is_search) {
+		
+		// restrict to pages
+		$query->set( 'post_type', 'page' );
+		
+		// order by ascending menu_order
+		$query->set( 'orderby', 'menu_order' );
+		$query->set( 'order', 'ASC' );
+		
+	}
+	
+}
+
+// add filter for the above
+add_filter( 'pre_get_posts','cpncfr_search_filter' );
 
 
 

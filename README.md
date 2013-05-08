@@ -1,15 +1,15 @@
 Commentpress Child Theme
 ========================
 
-This is a basic child theme for [*CommentPress Core*](https://github.com/IFBook/commentpress-core) which demonstrates how to override various stylistic elements of the *CommentPress Responsive Theme*. Use it as a "starter pack" for creating your own look and feel.
+This is a basic child theme for [*CommentPress Core*](https://github.com/IFBook/commentpress-core) which demonstrates how to override various stylistic elements of the *CommentPress Default Theme*. Use it as a "starter pack" for creating your own look and feel.
 
-Please note: this child theme only works with the *CommentPress Responsive Theme*. Please make sure that *CommentPress Core* is properly installed before using it.
+Please note: this child theme only works with the *CommentPress Default Theme* supplied with the *CommentPress Core* plugin. Please make sure that *CommentPress Core* is properly installed before using it.
 
 ## Installation ##
 
 Please install and activate the theme by doing the following:
 
-1. Unzip the .zip file and, if needed, rename the enclosing folder so that the theme's files are located directly inside `/wp-content/themes/commentpress-ncfr`.
+1. Unzip the .zip file and, if needed, rename the enclosing folder so that the theme's files are located directly inside `/wp-content/themes/commentpress-child`.
 2. Activate the theme.
 3. Visit settings pages and configure theme.
 

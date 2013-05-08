@@ -80,65 +80,6 @@ if ( $_avatar != '' ) {
 
 
 
-<?php 
-
-/*
-
-?>
-
-<dl>
-
-<dt>Gravatar</dt>
-<dd><?php echo get_avatar( $my_author->user_email, $size='128' ); ?></dd>
-
-// get full name
-$my_name = commentpress_get_full_name( $my_author->first_name, $my_author->last_name );
-
-if ( $my_name != '' ) { ?>
-<dt>Name</dt>
-<dd><?php echo $my_name; ?></dd>
-<?php } ?>
-
-<?php if ( $my_author->display_name != '' ) { ?>
-<dt>Display Name</dt>
-<dd><?php echo $my_author->display_name; ?></dd>
-<?php } ?>
-
-<?php if ( $authorURL != '' ) { ?>
-<dt>Website</dt>
-<dd><a href="<?php echo $my_author->user_url; ?>"><?php echo $my_author->user_url; ?></a></dd>
-<?php } ?>
-
-<?php if ( $my_author->user_email != '' ) { ?>
-<dt>Email</dt>
-<dd><a href="mailto:<?php echo $my_author->user_email; ?>"><?php echo $my_author->user_email; ?></a></dd>
-<?php } ?>
-
-<?php if ( $my_author->yim != '' ) { ?>
-<dt>Yahoo IM</dt>
-<dd><?php echo $my_author->yim; ?></dd>
-<?php } ?>
-
-<?php if ( $my_author->aim != '' ) { ?>
-<dt>AIM</dt>
-<dd><?php echo $my_author->aim; ?></dd>
-<?php } ?>
-
-<?php if ( $my_author->jabber != '' ) { ?>
-<dt>Jabber / Google Talk</dt>
-<dd><?php echo $my_author->jabber; ?></dd>
-<?php } ?>
-
-</dl>
-
-<?php
-
-*/
-
-?>
-
-
-
 <!-- The Loop -->
 <?php if ( have_posts() ) {
 
@@ -183,7 +124,7 @@ $page_args = array(
 	'post_status' => 'publish',
 	'post_type' => 'page',
 	'author' => $my_author->ID,
-	'posts_per_page' => 0,
+	'posts_per_page' => -1,
 	'no_found_rows' => true,
 );
 
