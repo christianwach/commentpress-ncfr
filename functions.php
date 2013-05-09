@@ -746,8 +746,8 @@ add_filter( 'the_excerpt', 'cpncfr_text_highlight' );
  */
 function cpncfr_search_filter( &$query ) {
 	
-	// restrict to search
-	if ($query->is_search) {
+	// restrict to search outside admin
+	if ( ! is_admin() AND $query->is_search ) {
 		
 		// restrict to pages
 		$query->set( 'post_type', 'page' );
